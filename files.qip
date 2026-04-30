@@ -15,5 +15,3 @@ set_global_assignment -name VHDL_FILE rtl/vectrex.vhd
 set_global_assignment -name SDC_FILE Vectrex.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/alphablend.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Vectrex.sv
-set_global_assignment -name VERILOG_FILE rtl/joydb9md.v
-set_global_assignment -name VERILOG_FILE rtl/joydb15.v
