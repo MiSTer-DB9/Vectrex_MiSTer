@@ -361,8 +361,8 @@ wire  [7:0] ioctl_dout;
 wire [15:0] ioctl_index;
 
 // S CBA UDLR
-wire [31:0] joystick_0 = joydb_1ena ? (OSD_STATUS? 32'b000000 : {joydb_1[10]|joydb_1[7],joydb_1[6:0]}) : joystick_0_USB;
-wire [31:0] joystick_1 = joydb_2ena ? (OSD_STATUS? 32'b000000 : {joydb_2[10]|joydb_2[7],joydb_2[6:0]}) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
+wire [31:0] joystick_0 = joydb_1ena ? (OSD_STATUS? 32'b000000 : joydb_1_mapped[7:0]) : joystick_0_USB;
+wire [31:0] joystick_1 = joydb_2ena ? (OSD_STATUS? 32'b000000 : joydb_2_mapped[7:0]) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
 
 
 
